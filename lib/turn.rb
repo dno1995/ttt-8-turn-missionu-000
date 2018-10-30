@@ -29,7 +29,7 @@ def turn(board)
   input = gets
   index = input_to_index(input)
   if position_taken?(board, index) == false
-    move(board, index, token)
+    move(board, index)
   else
     puts "Invalid move"
     turn(board)
