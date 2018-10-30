@@ -28,7 +28,7 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets
   index = input_to_index(input)
-  if position_taken?(board, index) == false
+  if vslid_move?(board, index) == true
     move(board, index)
   else
     puts "Invalid move"
