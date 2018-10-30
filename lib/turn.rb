@@ -20,10 +20,13 @@ def move(board, index, token = 'X')
   board[index] = token
 end
 
-def input_to_index(input)
-  input.to_i-1
-end
-
 def turn(board)
   puts "Please enter 1-9:"
+  input = gets
+  index = input.to_i-1
+  if position_taken?(board, index) == false
+    move(board, index, token)
+  else
+    puts "Invalid move"
+    turn(board)
 end
